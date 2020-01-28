@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Encrypter {
+
+	static int[] Code = new int[4]; // Array of the digits collected by the user
+
+	public static void Encrypt() {
+
+		Scanner Digits = new Scanner(System.in);
+
+		System.out.println("Enter the code that you want to Encrypt separate by a space: ");
+
+		// Input from the User
+		for (int i = 0; i <= Code.length; i++) {
+			int temp; // temporary variable	
+			Code[i] = Digits.nextInt();
+
+			// Encrypt function
+			Code[i] = (Code[i] + 7) % 10;
+			temp = Code[i];
+		/*	if (i <= 2) {
+				Code[i + 2] = temp;
+			} else {
+				Code[i - 2] = temp;
+			}*/
+		}
+
+	for(int i = 0;i<=Code.length;i++){
+		
+		System.out.print(Code[i] + " ");
+		
+	}
+}
+}

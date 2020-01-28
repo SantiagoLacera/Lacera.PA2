@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Encrypter {
+	
+	Scanner Digits = new Scanner(System.in);
+
+    int[] Code = new int[4]; 
+	
+    System.out.print("Enter the code you want to Encrypt: ");
+	Code = Digits.nextInt();
+	System.out.print(Code);
+	
+	
+
+        Code = (Code + 7) % 10;
+}
+
