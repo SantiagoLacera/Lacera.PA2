@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Application {
+	
+	static Scanner in = new Scanner(System.in);
+	
+	
+
+	public static void main(String[] args) {
+
+		int encryptOrDecrypt = 0;
+		Encrypter Encrypt = new Encrypter();
+
+		// inputMethod(encryptOrDecrypt);
+		System.out.println("Would you like to: ");
+		System.out.println("1. Encrypt");
+		System.out.println("2. Decrypt");
+		System.out.print("3. Exit");
+		System.out.print("Choose: ");
+		encryptOrDecrypt = in.nextInt();
+
+		do {
+
+			switch (encryptOrDecrypt) {
+			case 1:
+				Encrypter.Encrypt();
+				inputMethod(encryptOrDecrypt);
+				break;
+			case 2:
+				Decrypter.Decrypt();
+				inputMethod(encryptOrDecrypt);
+				break;
+			case 3:
+				System.out.print("Goodbye");
+				break;
+			default:
+				System.out.println("Sorry, your input was incorrect try again");
+				// input method
+			}
+		} while (encryptOrDecrypt != 3);
+
+	}
+	
+	public static void inputMethod(int encryptOrDecrypt) {
+		
+		
+		
+	}
+
+}

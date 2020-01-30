@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Encrypter {
 
-	static int Code1;
-	static int Code2;     // Array of the digits collected by the user
-	static int Code3;
-	static int Code4;
+	static int CodeEncryter1;
+	static int CodeEncrypter2;     // Array of the digits collected by the user
+	static int CodeEncrypter3;
+	static int CodeEncrypter4;
 	static int temp;
 	
 	public static void Encrypt() {
@@ -16,30 +16,25 @@ public class Encrypter {
 
 		// Input from the User
 		
-			Code1 = Digits.nextInt();
-			Code2 = Digits.nextInt();
-			Code3 = Digits.nextInt();
-			Code4 = Digits.nextInt();
+			CodeEncryter1 = Digits.nextInt();
+			CodeEncrypter2 = Digits.nextInt();
+			CodeEncrypter3 = Digits.nextInt();
+			CodeEncrypter4 = Digits.nextInt();
 
 			// Encrypt function
-			Code1 = (Code1 + 7) % 10;
-			Code2 = (Code2 + 7) % 10;
-			Code3 = (Code3 + 7) % 10;
-			Code4 = (Code4 + 7) % 10;
+			CodeEncryter1 = (CodeEncryter1 + 7) % 10;
+			CodeEncrypter2 = (CodeEncrypter2 + 7) % 10;
+			CodeEncrypter3 = (CodeEncrypter3 + 7) % 10;
+			CodeEncrypter4 = (CodeEncrypter4 + 7) % 10;
 			
 			//Encrypt Swap
-			temp = Code3;
-			Code3 = Code1;
-			Code1 = temp;
-			temp = Code4;
-			Code4 = Code2;
-			Code2 = temp;
+			temp = CodeEncrypter3;
+			CodeEncrypter3 = CodeEncryter1;
+			CodeEncryter1 = temp;
+			temp = CodeEncrypter4;
+			CodeEncrypter4 = CodeEncrypter2;
+			CodeEncrypter2 = temp;
 			
-			//User Output 
-			System.out.print(Encrypter.Code1);
-			System.out.print(Encrypter.Code2);
-			System.out.print(Encrypter.Code3);
-			System.out.print(Encrypter.Code4);
 			
 		}
 

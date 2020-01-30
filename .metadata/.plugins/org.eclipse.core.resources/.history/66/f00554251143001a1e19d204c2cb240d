@@ -1,0 +1,51 @@
+import java.awt.im.spi.InputMethod;
+import java.util.Scanner;
+
+public class Application {
+	
+	static Scanner in = new Scanner(System.in);
+	public static int encryptOrDecrypt = 0;
+	
+
+	public static void main(String[] args) {
+
+		
+		Encrypter Encrypt = new Encrypter();
+
+		// inputMethod(encryptOrDecrypt);		
+
+		do {
+			inputMethod(encryptOrDecrypt);
+
+			switch (encryptOrDecrypt) {
+			case 1:
+				Encrypter.Encrypt();
+				break;
+			case 2:
+				Decrypter.Decrypt();
+				break;
+			case 3:
+				System.out.print("Goodbye");
+				break;
+			default:
+				System.out.println("Sorry, your input was incorrect try again \n");
+				break;
+				// input method
+			}
+		} while (encryptOrDecrypt != 3);
+
+	}
+
+	
+	public static int inputMethod(int encryptOrDecrypt2) {
+		
+		System.out.println("Would you like to: ");
+		System.out.println("1. Encrypt");
+		System.out.println("2. Decrypt");
+		System.out.println("3. Exit");
+		System.out.print("Choose: ");
+		return encryptOrDecrypt = in.nextInt();
+			
+	}
+
+}

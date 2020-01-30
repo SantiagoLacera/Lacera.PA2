@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Encrypter {
+
+	static int CodeEncryter1;
+	static int CodeEncrypter2;     // Array of the digits collected by the user
+	static int CodeEncrypter3;
+	static int CodeEncrypter4;
+	static int temp;
+	
+	public static void Encrypt() {
+
+		Scanner Digits = new Scanner(System.in);
+
+		System.out.println("Enter the code that you want to Encrypt separate by a space: ");
+
+		// Input from the User
+		
+			CodeEncryter1 = Digits.nextInt();
+			CodeEncrypter2 = Digits.nextInt();
+			CodeEncrypter3 = Digits.nextInt();
+			CodeEncrypter4 = Digits.nextInt();
+
+			// Encrypt function
+			CodeEncryter1 = (CodeEncryter1 + 7) % 10;
+			CodeEncrypter2 = (CodeEncrypter2 + 7) % 10;
+			CodeEncrypter3 = (CodeEncrypter3 + 7) % 10;
+			CodeEncrypter4 = (CodeEncrypter4 + 7) % 10;
+			
+			//Encrypt Swap
+			temp = CodeEncrypter3;
+			CodeEncrypter3 = CodeEncryter1;
+			CodeEncryter1 = temp;
+			temp = CodeEncrypter4;
+			CodeEncrypter4 = CodeEncrypter2;
+			CodeEncrypter2 = temp;
+			
+			//User Output 
+			System.out.println(CodeEncryter1);
+			System.out.println(CodeEncrypter2);
+			System.out.println(CodeEncrypter3);
+			System.out.println(CodeEncrypter4);
+			
+		}
+
+		
+
+	}
+
