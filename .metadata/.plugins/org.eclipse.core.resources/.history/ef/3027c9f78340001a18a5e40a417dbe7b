@@ -1,9 +1,0 @@
-import java.util.Scanner;
-
-public class Encrypter {
-	
-	Scanner Digits = new Scanner(System.in);
-
-	
-
-}

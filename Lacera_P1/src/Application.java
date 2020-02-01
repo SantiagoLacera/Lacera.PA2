@@ -1,4 +1,3 @@
-import java.awt.im.spi.InputMethod;
 import java.util.Scanner;
 
 public class Application {
@@ -21,7 +20,7 @@ public class Application {
 			case 1:
 				Encrypter.Encrypt();
 				//User Output 
-				System.out.print("Your Encrypted code is: " + Encrypter.CodeEncryter1 + " ");
+				System.out.print("Your Encrypted code is: " + Encrypter.CodeEncrypter1 + " ");
 				System.out.print(Encrypter.CodeEncrypter2 + " ");
 				System.out.print(Encrypter.CodeEncrypter3 + " ");
 				System.out.println(Encrypter.CodeEncrypter4);

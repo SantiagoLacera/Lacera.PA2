@@ -1,8 +1,0 @@
-
-public class Encrypter {
-
-	int[] Code = new int[4];
-
-        Code = (Code + 7) % 10;
-
-}
